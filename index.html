@@ -316,6 +316,12 @@ details[open] summary .pm{rotate:45deg}
 .bar i{display:block;background:var(--g);border-radius:9px 9px 3px 3px;height:var(--h);transform-origin:bottom}
 .bar:nth-child(2n) i{background:var(--b)}
 .bar span{display:block;margin-top:7px;font-weight:700;font-size:clamp(14px,2vw,18px);line-height:1;hyphens:none}
+.rvw{columns:1;column-gap:14px;margin-top:26px}
+.rvw figure{margin:0 0 14px;break-inside:avoid;border-radius:14px;overflow:hidden;border:1px solid var(--line);box-shadow:var(--sh);transition:translate .25s,border-color .25s}
+.rvw figure:hover{translate:0 -4px;border-color:var(--g)}
+.rvw img{width:100%;height:auto}
+.rvw:not(.all) figure:nth-child(n+5){display:none}
+.rvm{justify-content:center}.rvm .btn{flex:0 1 320px}
 .price{display:flex;flex-direction:column;align-items:center;text-align:center}
 .price .big{font-size:clamp(84px,17vw,140px);color:var(--g2)}
 .math{display:grid;gap:8px;margin-top:14px;width:100%}
@@ -337,7 +343,7 @@ details[open] summary .pm{rotate:45deg}
 .foot{margin-top:clamp(70px,9vw,120px);padding:24px 0 30px;border-top:1px solid var(--line);color:var(--soft);font-size:14px}
 .foot .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
 .foot a{color:var(--ink);transition:color .2s}.foot a:hover{color:var(--g2)}
-@media (min-width:640px){.flips{grid-template-columns:1fr 1fr}.pains{grid-template-columns:1fr 1fr}.opts{grid-template-columns:1fr 1fr}.feat{grid-template-columns:1fr 1fr}.three{grid-template-columns:repeat(3,1fr)}.sum{grid-template-columns:repeat(3,1fr)}.shots{grid-template-columns:1fr 1fr}}
+@media (min-width:640px){.rvw{columns:2}.flips{grid-template-columns:1fr 1fr}.pains{grid-template-columns:1fr 1fr}.opts{grid-template-columns:1fr 1fr}.feat{grid-template-columns:1fr 1fr}.three{grid-template-columns:repeat(3,1fr)}.sum{grid-template-columns:repeat(3,1fr)}.shots{grid-template-columns:1fr 1fr}}
 @media (min-width:768px){:root{--pad:32px;--head:72px}
  .wa-p{display:flex}.logo b{font-size:15px}.logo small{font-size:12px}
  .split{grid-template-columns:1.05fr 1fr;align-items:start}
@@ -351,7 +357,7 @@ details[open] summary .pm{rotate:45deg}
  .dock p{font-size:16px}.dock small{display:inline;margin-left:10px;font-size:14.500px}.dock .btn{font-size:14px;padding:0 28px}
  .feat{grid-template-columns:repeat(3,1fr);gap:40px 18px}
 }
-@media (min-width:1000px){.h-grid{grid-template-columns:1.14fr .9fr;align-items:center;gap:30px}.art{max-width:none;margin:0}.btns.h .btn{flex:0 1 auto}.scrl{display:flex}.flips{grid-template-columns:repeat(4,1fr)}.exl{grid-template-columns:1fr 1fr}.shots{grid-template-columns:repeat(3,1fr)}.sh.wide{grid-column:span 2}.sh.wide video{aspect-ratio:auto;height:100%}.hero{padding-top:calc(var(--head) + 44px)}.minis{max-width:470px}}
+@media (min-width:1000px){.rvw{columns:3}.rvw:not(.all) figure:nth-child(n+5){display:block}.rvm{display:none}.h-grid{grid-template-columns:1.14fr .9fr;align-items:center;gap:30px}.art{max-width:none;margin:0}.btns.h .btn{flex:0 1 auto}.scrl{display:flex}.flips{grid-template-columns:repeat(4,1fr)}.exl{grid-template-columns:1fr 1fr}.shots{grid-template-columns:repeat(3,1fr)}.sh.wide{grid-column:span 2}.sh.wide video{aspect-ratio:960/456;height:auto}.shots{align-items:start}.hero{padding-top:calc(var(--head) + 44px)}.minis{max-width:470px}}
 @media (max-height:700px){html.gs .stage{gap:9px;padding:13px}.cap{font-size:15px}}
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
 </style>
@@ -616,6 +622,8 @@ details[open] summary .pm{rotate:45deg}
       <div class="sh"><img src="media/nt-themes.webp" alt="Лексика по темам" loading="lazy"><div class="tag2"><b>Лексика по темам</b><span>131 блок</span></div></div>
       <div class="sh wide"><video data-v muted loop playsinline preload="none" poster="media/v-uygulama.webp" src="media/v-uygulama.mp4" aria-label="Запись экрана платформы"></video><div class="tag2"><b>Запись экрана</b><span>без монтажа</span></div></div>
       <div class="sh"><img src="media/nt-web-kino.webp" alt="Каталог фильмов по уровням" loading="lazy"><div class="tag2"><b>Кино по уровням</b><span>каталог</span></div></div>
+      <div class="sh wide"><video data-v muted loop playsinline preload="none" poster="media/v-podcasts.webp" src="media/v-podcasts.mp4" aria-label="Запись экрана: каталог подкастов"></video><div class="tag2"><b>Подкасты по уровням</b><span>запись экрана</span></div></div>
+      <div class="sh"><img src="media/nt-web-podcasts.webp" alt="Каталог подкастов" loading="lazy"><div class="tag2"><b>Подкасты</b><span>каталог</span></div></div>
     </div>
   </div>
   <div class="sub">
@@ -645,6 +653,12 @@ details[open] summary .pm{rotate:45deg}
       </div>
       <p class="note">Открываешь свой уровень и берёшь. Один материал может подходить сразу нескольким уровням.</p>
     </div>
+  </div>
+  <div class="sub" id="reviews">
+    <h2>Что пишут те, <b>кто уже внутри</b></h2>
+    <p class="lead ctr">Скриншоты переписок. Имена и фото убрал: людям не нужна реклама, им нужен турецкий.</p>
+    <div class="rvw" id="rvw"><figure><img src="media/rv-8.webp" width="510" height="516" alt="Отзыв: понимала турецкий на слух, после разбора грамматики ушёл барьер" loading="lazy"></figure><figure><img src="media/rv-6.webp" width="534" height="216" alt="Отзыв: курс с нуля и благодарность за чёткую структуру" loading="lazy"></figure><figure><img src="media/rv-2.webp" width="538" height="222" alt="Отзыв: тренажёры по лексике помогли подготовиться к встрече" loading="lazy"></figure><figure><img src="media/rv-9.webp" width="508" height="434" alt="Отзыв: площадка от A0 до C1 с огромной базой" loading="lazy"></figure><figure><img src="media/rv-5.webp" width="588" height="446" alt="Отзыв: виден результат и есть удовольствие от процесса" loading="lazy"></figure><figure><img src="media/rv-1.webp" width="532" height="176" alt="Отзыв: материалы удачно подобраны по уровням" loading="lazy"></figure><figure><img src="media/rv-10.webp" width="508" height="592" alt="Отзыв: материалы вместе с занятиями у репетитора" loading="lazy"></figure><figure><img src="media/rv-4.webp" width="532" height="258" alt="Отзыв: материалы по уровням, объяснения с примерами" loading="lazy"></figure><figure><img src="media/rv-7.webp" width="920" height="272" alt="Отзыв: начинала несколько раз, теперь учит каждый день" loading="lazy"></figure><figure><img src="media/rv-3.webp" width="536" height="126" alt="Отзыв: всё необходимое для уровня уже есть" loading="lazy"></figure></div>
+    <div class="btns rvm"><button class="btn o" type="button" id="rvMore">Показать все отзывы</button></div>
   </div>
   <div class="sub" id="buy">
     <h2>Сколько стоит <span class="hl">одна непонятая строка</span> в договоре?</h2>
@@ -802,6 +816,7 @@ var ds=function(){var a=adS.getBoundingClientRect(),z=end.getBoundingClientRect(
 addEventListener('scroll',ds,{passive:true});ds();
 $$('video[data-v]').forEach(function(v){if(!('IntersectionObserver' in window))return;new IntersectionObserver(function(e){if(e[0].isIntersecting&&!reduce){var p=v.play();if(p&&p.catch)p.catch(function(){})}else v.pause()},{rootMargin:'120px'}).observe(v)});
 
+$('#rvMore').addEventListener('click',function(){$('#rvw').classList.add('all');this.parentNode.style.display='none';if(window.ScrollTrigger)ScrollTrigger.refresh()});
 /* навигация */
 var secs=$$('[data-nav]');
 $('#panelL').innerHTML=secs.map(function(s,i){return '<li><a href="#'+s.id+'"><span>'+(i+1)+'</span>'+s.dataset.nav+'</a></li>'}).join('');
