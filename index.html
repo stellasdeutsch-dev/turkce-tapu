@@ -360,6 +360,25 @@ details[open] summary .pm{rotate:45deg}
 @media (min-width:1000px){.rvw{columns:3}.rvw:not(.all) figure:nth-child(n+5){display:block}.rvm{display:none}.h-grid{grid-template-columns:1.14fr .9fr;align-items:center;gap:30px}.art{max-width:none;margin:0}.btns.h .btn{flex:0 1 auto}.scrl{display:flex}.flips{grid-template-columns:repeat(4,1fr)}.exl{grid-template-columns:1fr 1fr}.shots{grid-template-columns:repeat(3,1fr)}.sh.wide{grid-column:span 2}.sh.wide video{aspect-ratio:960/456;height:auto}.shots{align-items:start}.hero{padding-top:calc(var(--head) + 44px)}.minis{max-width:470px}}
 @media (max-height:700px){html.gs .stage{gap:9px;padding:13px}.cap{font-size:15px}}
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
+
+/* иллюстрации */
+.vz{margin:clamp(26px,3.4vw,40px) 0 0;display:grid;gap:18px;overflow:hidden}
+.vz svg{display:block}
+.vz-art{width:100%;height:clamp(230px,34vw,400px);border-radius:var(--r2)}
+.vz-cap{font-size:15.5px;line-height:1.4;color:var(--mid);text-wrap:pretty}
+.vz-tags{display:flex;flex-wrap:wrap;gap:8px}
+.vz-tag{display:inline-flex;align-items:center;justify-content:center;min-height:36px;padding:6px 14px;border-radius:99px;background:var(--pale);font-size:14.5px;font-weight:600;line-height:1.25;hyphens:none;text-align:center;transition:background .2s}
+.vz-tag:hover{background:var(--gp)}
+.vz-row{display:grid;gap:18px;align-items:center}
+.vz-dia{width:100%;height:auto;max-width:640px;margin:0 auto}
+.vz-t{font-family:var(--f);font-weight:800}
+.vz-note{display:grid;gap:8px}
+.vz-note p{display:flex;flex-wrap:wrap;align-items:baseline;gap:2px 10px;background:var(--pale);border-radius:12px;padding:10px 14px;font-size:15.5px;line-height:1.3;font-weight:500;color:var(--ink);text-wrap:pretty;transition:background .2s}
+.vz-note p:hover{background:var(--gp)}
+.vz-note .trw{font-weight:700;color:var(--g2)}
+.vz-lab{display:flex;flex-wrap:wrap;gap:6px 16px;justify-content:center;font-size:14px;color:var(--mid)}
+.vz-lab i{display:inline-block;width:12px;height:12px;border-radius:4px;margin-right:6px;vertical-align:-1px}
+@media (min-width:768px){.vz-row{grid-template-columns:1.25fr 1fr;gap:34px}}
 </style>
 <script defer src="assets/gsap-bundle.min.js"></script>
 </head>
@@ -462,6 +481,16 @@ details[open] summary .pm{rotate:45deg}
       <div class="msg me"><div><p class="tr" lang="tr">Anladım. Aylık aidat ne kadar?</p><small>Поняла. Сколько ежемесячный взнос?</small></div><button class="say" type="button" data-say="Anladım. Aylık aidat ne kadar?" aria-label="Послушать"><svg class="ic"><use href="#i-say"/></svg></button></div>
     </div>
   </div>
+  <figure class="vz card rv" id="vzRoom" aria-label="Комната: море видно только со стула, за окном забор, труба течёт в ведро">
+    <svg class="vz-art" viewBox="0 0 1000 400" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+      <rect width="1000" height="400" fill="#F6F7F6"/><rect y="340" width="1000" height="60" fill="#EFE2C2"/><rect y="336" width="1000" height="6" fill="#E9EBE9"/>
+      <g><rect x="360" y="22" width="310" height="196" rx="10" fill="#fff" stroke="#E9EBE9" stroke-width="4"/><rect x="372" y="34" width="286" height="172" rx="4" fill="#BDE7FA"/><rect class="vz-sea" x="372" y="62" width="286" height="30" fill="#2DAEEB"/><g class="vz-fence" fill="#9A6B3F"><rect x="372" y="96" width="286" height="16"/><rect x="380" y="84" width="22" height="122" rx="4"/><rect x="418" y="84" width="22" height="122" rx="4"/><rect x="456" y="84" width="22" height="122" rx="4"/><rect x="494" y="84" width="22" height="122" rx="4"/><rect x="532" y="84" width="22" height="122" rx="4"/><rect x="570" y="84" width="22" height="122" rx="4"/><rect x="608" y="84" width="22" height="122" rx="4"/><rect x="372" y="148" width="286" height="14"/></g></g>
+      <g><path d="M540 340v-96h-10v96zM598 340v-96h-10v96z" fill="#9A6B3F"/><rect x="520" y="234" width="86" height="16" rx="4" fill="#7F5730"/><g class="vz-man"><circle cx="562" cy="78" r="23" fill="#FFCFA8"/><path d="M539 74c2-16 14-24 26-22 13 2 21 12 18 24-7-6-16-9-25-8-7 2-13 4-19 6z" fill="#2B2D2B"/><path d="M540 234v-90a22 22 0 0 1 44 0v90z" fill="#55BC4F"/><rect x="540" y="228" width="16" height="10" fill="#178FCB"/><rect x="568" y="228" width="16" height="10" fill="#178FCB"/><path d="M582 132l30-30" stroke="#55BC4F" stroke-width="13" stroke-linecap="round"/></g></g>
+      <g><rect x="268" y="0" width="16" height="170" fill="#8A8E8A"/><rect x="258" y="166" width="36" height="16" rx="4" fill="#5E625E"/><g class="vz-drip" fill="#2DAEEB"><path d="M276 192c0 8-5 14-5 14s-5-6-5-14a5 5 0 0 1 10 0z"/><path d="M276 226c0 8-5 14-5 14s-5-6-5-14a5 5 0 0 1 10 0z"/></g><path d="M238 278h76l-8 62h-60z" fill="#5E625E"/><rect x="232" y="270" width="88" height="12" rx="4" fill="#2B2D2B"/><path d="M248 296h56" stroke="#2DAEEB" stroke-width="10"/></g>
+      <g fill="#7CCB5F"><circle cx="694" cy="248" r="16"/><path d="M688 264l6 76 6-76z" fill="#7F5730"/><circle cx="720" cy="236" r="14"/></g>
+    </svg>
+    <div class="vz-tags"><span class="vz-tag">Море видно, если встать на стул.</span><span class="vz-tag">Site значит жилой комплекс. С забором.</span><span class="vz-tag">Трубы текут до сих пор.</span></div>
+  </figure>
   <div class="three">
     <div class="card w3 rv"><div class="pic"><svg class="ic"><use href="#i-key"/></svg></div><h3 lang="tr">Tapu</h3><p class="txt">Документ о праве собственности. Написано, чьё это. Всё остальное просто разговоры.</p><div class="exs"><div class="ex"><button class="say" type="button" data-say="Tapu kimin üzerine?" aria-label="Послушать"><svg class="ic"><use href="#i-say"/></svg></button><div class="ex-t"><p class="tr" lang="tr">Tapu kimin üzerine?</p><p class="ru">На кого оформлен tapu?</p></div></div></div></div>
     <div class="card w3 rv"><div class="pic"><svg class="ic"><use href="#i-scale"/></svg></div><h3 lang="tr">Ekspertiz</h3><p class="txt">Оценка. Сколько стоит объект и что с ним по документам. Про трубы мы уже всё поняли.</p><div class="exs"><div class="ex"><button class="say" type="button" data-say="Ekspertiz raporu hazır mı?" aria-label="Послушать"><svg class="ic"><use href="#i-say"/></svg></button><div class="ex-t"><p class="tr" lang="tr">Ekspertiz rapor<b class="p">u</b> hazır mı?</p><p class="ru">Отчёт об оценке готов?</p></div></div></div></div>
@@ -490,6 +519,16 @@ details[open] summary .pm{rotate:45deg}
     <div class="fi rv"><div class="hair"></div><div class="ico"><svg class="ic"><use href="#i-bubble"/></svg></div><div class="chk"><svg class="ic"><use href="#i-ok"/></svg></div><h3 style="margin-top:24px">Узнать комиссию</h3><div class="exs"><div class="ex"><button class="say" type="button" data-say="Komisyon ne kadar?" aria-label="Послушать"><svg class="ic"><use href="#i-say"/></svg></button><div class="ex-t"><p class="tr" lang="tr">Komisyon ne kadar?</p><p class="ru">Сколько комиссия?</p></div></div></div></div>
     <div class="fi rv"><div class="hair"></div><div class="ico"><svg class="ic"><use href="#i-hour"/></svg></div><div class="chk"><svg class="ic"><use href="#i-ok"/></svg></div><h3 style="margin-top:24px">Взять паузу</h3><div class="exs"><div class="ex"><button class="say" type="button" data-say="Düşünmek için zaman istiyorum." aria-label="Послушать"><svg class="ic"><use href="#i-say"/></svg></button><div class="ex-t"><p class="tr" lang="tr">Düşünmek için zaman istiyorum.</p><p class="ru">Мне нужно время подумать.</p></div></div></div></div>
   </div>
+  <figure class="vz card rv" id="vzSign" aria-label="Договор на столе: подпись ставит покупатель, рядом кофе риелтора">
+    <svg class="vz-art" viewBox="0 0 1000 400" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+      <rect width="1000" height="400" fill="#E8DFC9"/><g fill="none" stroke="#DCCFB0" stroke-width="3"><path d="M0 110h1000M0 220h1000M0 320h1000"/></g>
+      <rect x="350" y="26" width="300" height="360" rx="10" fill="#fff" stroke="#E9EBE9" stroke-width="3"/><rect x="350" y="26" width="300" height="44" rx="10" fill="#55BC4F"/><g stroke="#D5DAD5" stroke-width="7" stroke-linecap="round"><path d="M384 104h232M384 130h200M384 156h232M384 182h170M384 208h232M384 234h120"/></g>
+      <path d="M384 324h232" stroke="#2B2D2B" stroke-width="3"/><path class="vz-sign" d="M392 316c14-34 26-46 34-26 5 14-10 30-14 16-3-10 24-32 36-22 8 8-6 24 2 26 14 4 34-30 50-14 8 8 0 18 12 18 16 0 34-20 74-16" fill="none" stroke="#178FCB" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="520" stroke-dashoffset="0"/>
+      <g class="vz-pen" transform="translate(586 262) rotate(38)"><rect x="-13" y="-92" width="26" height="110" rx="6" fill="#2B2D2B"/><path d="M-13 18h26l-13 30z" fill="#F5C31E"/></g>
+      <g class="vz-cup"><circle cx="772" cy="146" r="66" fill="#fff"/><circle cx="772" cy="146" r="48" fill="#6B3E12"/><path d="M836 134a18 18 0 0 1 2 36" fill="none" stroke="#fff" stroke-width="10"/><g fill="none" stroke="#8A8E8A" stroke-width="5" stroke-linecap="round"><path class="vz-st" d="M750 80c-8-12 8-20 0-34"/><path class="vz-st" d="M786 76c-8-12 8-20 0-34"/></g></g>
+    </svg>
+    <div class="vz-tags"><span class="vz-tag">Подпись ставишь ты.</span><span class="vz-tag">Риелтор ставит только кофе.</span></div>
+  </figure>
 </section>
 
 <section class="sec wrap" id="sdelka" data-nav="Сделка">
@@ -517,6 +556,15 @@ details[open] summary .pm{rotate:45deg}
     <div class="result"><p class="tr" lang="tr">tapu müdür<b class="t">lüğ</b><b class="s">ü</b><b class="p">nde</b></p><span class="mute" style="color:var(--soft)">в земельном управлении</span><button class="say" type="button" data-say="tapu müdürlüğünde" aria-label="Послушать"><svg class="ic"><use href="#i-say"/></svg></button></div>
   </div></div></div>
 
+  <figure class="vz card rv" id="vzTrain" aria-label="Поезд: локомотив и вагоны müdür, lüğ, ü, nde">
+    <svg class="vz-dia" viewBox="0 0 1000 270" aria-hidden="true" style="max-width:none">
+      <g class="vz-rail"><path d="M0 258h1000" stroke="#D5DAD5" stroke-width="6"/><g stroke="#D5DAD5" stroke-width="5"><path d="M50 258v12M130 258v12M210 258v12M290 258v12M370 258v12M450 258v12M530 258v12M610 258v12M690 258v12M770 258v12M850 258v12M930 258v12"/></g></g>
+      <g class="vz-loco"><path d="M14 230v-92a22 22 0 0 1 22-22h76v-40h46v40h30l36 54v60z" fill="#2DAEEB"/><rect x="60" y="134" width="60" height="44" rx="8" fill="#BDE7FA"/><circle cx="56" cy="238" r="22" fill="#2B2D2B"/><circle cx="156" cy="238" r="22" fill="#2B2D2B"/><g fill="#BDE7FA"><circle class="vz-sm" cx="136" cy="56" r="13"/><circle class="vz-sm" cx="154" cy="34" r="9"/></g></g>
+      <rect x="225" y="186" width="24" height="10" fill="#8A8E8A"/><g class="vz-wag"><rect x="250" y="120" width="260" height="110" rx="12" fill="#55BC4F"/><text class="vz-t" x="380" y="192" text-anchor="middle" font-size="46" fill="#fff">müdür</text><circle cx="282" cy="238" r="18" fill="#2B2D2B"/><circle cx="478" cy="238" r="18" fill="#2B2D2B"/></g><rect x="510" y="186" width="24" height="10" fill="#8A8E8A"/><g class="vz-wag"><rect x="534" y="120" width="158" height="110" rx="12" fill="#F5C31E"/><text class="vz-t" x="613" y="192" text-anchor="middle" font-size="46" fill="#2B2D2B">lüğ</text><circle cx="566" cy="238" r="18" fill="#2B2D2B"/><circle cx="660" cy="238" r="18" fill="#2B2D2B"/></g><rect x="692" y="186" width="20" height="10" fill="#8A8E8A"/><g class="vz-wag"><rect x="712" y="120" width="100" height="110" rx="12" fill="#2DAEEB"/><text class="vz-t" x="762" y="192" text-anchor="middle" font-size="46" fill="#fff">ü</text><circle cx="744" cy="238" r="18" fill="#2B2D2B"/><circle cx="780" cy="238" r="18" fill="#2B2D2B"/></g><rect x="812" y="186" width="20" height="10" fill="#8A8E8A"/><g class="vz-wag"><rect x="832" y="120" width="158" height="110" rx="12" fill="#6B35D8"/><text class="vz-t" x="911" y="192" text-anchor="middle" font-size="46" fill="#fff">nde</text><circle cx="864" cy="238" r="18" fill="#2B2D2B"/><circle cx="958" cy="238" r="18" fill="#2B2D2B"/></g>
+    </svg>
+    <div class="vz-lab"><span><i style="background:#55BC4F"></i>Корень</span><span><i style="background:#F5C31E"></i>Место</span><span><i style="background:#2DAEEB"></i>Чьё</span><span><i style="background:#6B35D8"></i>Где</span></div>
+    <figcaption class="vz-cap">Вагоны цепляются по одному.</figcaption>
+  </figure>
   <div class="sub">
     <h3>Гармония: кто выбирает, <b>-da или -de</b></h3>
     <p class="txt">Выбирает последняя гласная. Ты не споришь. Ты смотришь.</p>
@@ -538,6 +586,20 @@ details[open] summary .pm{rotate:45deg}
   <div class="sub">
     <h3>Два слова в обнимку</h3>
     <p class="txt">Почти все документы сделаны по одной схеме. Первое слово стоит как есть. Второе получает хвост -ı, -i, -u, -ü или -sı, -si, -su, -sü. Нажми на строку, услышишь.</p>
+  <figure class="vz card rv" id="vzHug" aria-label="Два слова в обнимку: первое стоит как есть, второе получает хвост">
+    <div class="vz-row">
+      <svg class="vz-dia" viewBox="0 0 720 280" aria-hidden="true">
+        <rect x="26" y="118" width="214" height="110" rx="16" fill="#E9EBE9"/><text class="vz-t" x="133" y="191" text-anchor="middle" font-size="44" fill="#2B2D2B">tapu</text>
+        <rect x="262" y="118" width="214" height="110" rx="16" fill="#E9EBE9"/><text class="vz-t" x="369" y="191" text-anchor="middle" font-size="44" fill="#2B2D2B">sened</text>
+        <g class="vz-tail"><rect x="484" y="118" width="108" height="110" rx="16" fill="#55BC4F"/><text class="vz-t" x="538" y="191" text-anchor="middle" font-size="44" fill="#fff">i</text></g>
+        <path class="vz-arm" d="M538 110C538 28 138 22 130 110" fill="none" stroke="#F5C31E" stroke-width="12" stroke-linecap="round"/>
+        <path d="M130 104l-16 26 30-6z" fill="#F5C31E"/>
+        <path class="vz-arm" d="M372 236c-6 34-210 34-222 -6" fill="none" stroke="#F5C31E" stroke-width="10" stroke-linecap="round"/>
+      </svg>
+      <div class="vz-note"><p>Первое слово стоит как есть.</p><p>Второе получает хвост <span lang="tr" class="trw">-ı, -i, -u, -ü</span> или <span lang="tr" class="trw">-sı, -si, -su, -sü.</span></p></div>
+    </div>
+    <div class="vz-tags"><span class="vz-tag" lang="tr">tapu senedi</span><span class="vz-tag" lang="tr">ekspertiz raporu</span><span class="vz-tag" lang="tr">satış sözleşmesi</span><span class="vz-tag" lang="tr">ev sahibi</span></div>
+  </figure>
     <div class="tbl" id="tbl"></div>
   </div>
 
@@ -552,6 +614,25 @@ details[open] summary .pm{rotate:45deg}
 
   <div class="sub">
     <h3>Как читать <b>tapu</b></h3>
+    <figure class="vz card rv" id="vzPlot" aria-label="Карта вложений: İl, İlçe, Mahalle, Ada, Parsel">
+    <div class="vz-row">
+      <svg class="vz-dia" viewBox="0 0 720 460" aria-hidden="true">
+        <rect class="vz-n" x="10" y="10" width="700" height="440" rx="26" fill="#E8F6E6"/><text class="vz-t" x="40" y="58" font-size="34" fill="#3FA63A">İl</text>
+        <rect class="vz-n" x="70" y="78" width="580" height="352" rx="22" fill="#BFE8BA"/><text class="vz-t" x="100" y="124" font-size="30" fill="#2C7A28">İlçe</text>
+        <rect class="vz-n" x="130" y="144" width="460" height="270" rx="18" fill="#7CCB5F"/><text class="vz-t" x="158" y="188" font-size="30" fill="#1F5A1C">Mahalle</text>
+        <rect class="vz-n" x="190" y="208" width="340" height="190" rx="14" fill="#2DAEEB"/><text class="vz-t" x="216" y="254" font-size="30" fill="#fff">Ada</text>
+        <rect class="vz-n" x="330" y="264" width="170" height="118" rx="12" fill="#F5C31E"/><text class="vz-t" x="415" y="330" text-anchor="middle" font-size="28" fill="#2B2D2B">Parsel</text>
+        <g class="vz-pin" transform="translate(70 -64)"><path d="M415 200c-26 0-46 20-46 46 0 34 46 72 46 72s46-38 46-72c0-26-20-46-46-46z" fill="#D62B20" stroke="#fff" stroke-width="5"/><circle cx="415" cy="246" r="16" fill="#fff"/></g>
+      </svg>
+      <div class="vz-note">
+        <p><span lang="tr" class="trw">İl</span>Провинция. Как область.</p>
+        <p><span lang="tr" class="trw">İlçe</span>Район внутри провинции.</p>
+        <p><span lang="tr" class="trw">Mahalle</span>Квартал, микрорайон.</p>
+        <p><span lang="tr" class="trw">Ada</span>Номер кадастрового блока.</p>
+        <p><span lang="tr" class="trw">Parsel</span>Номер участка внутри блока.</p>
+      </div>
+    </div>
+    </figure>
     <div class="dgrid">
       <div class="docw"><svg class="strap" viewBox="0 0 60 42" aria-hidden="true"><path d="M20 0h20v18H20z" fill="#2B2D2B"/><rect x="12" y="16" width="36" height="24" rx="5" fill="none" stroke="#2B2D2B" stroke-width="5"/></svg>
         <div class="doc"><div class="doc-h"><b lang="tr">Tapu senedi</b><span>учебный образец</span></div><div id="flds" lang="tr"></div></div>
@@ -578,6 +659,20 @@ details[open] summary .pm{rotate:45deg}
     <details><summary>Kat mülkiyeti и kat irtifakı<span class="pm"><svg class="ic"><use href="#i-plus"/></svg></span></summary><div class="dbody"><p>Оба про квартиру в доме. Kat mülkiyeti: право на готовую квартиру. Kat irtifakı: право на квартиру в доме, который ещё не принят. Рядом ходит слово iskan: разрешение на эксплуатацию.</p><div class="exs"><div class="ex"><button class="say" type="button" data-say="Binanın iskanı var mı?" aria-label="Послушать"><svg class="ic"><use href="#i-say"/></svg></button><div class="ex-t"><p class="tr" lang="tr">Binanın iskan<b class="p">ı</b> var mı?</p><p class="ru">У здания есть разрешение на эксплуатацию?</p></div></div></div></div></details>
     <details><summary>Источники: откуда взяты шаги сделки<span class="pm"><svg class="ic"><use href="#i-plus"/></svg></span></summary><div class="dbody"><p>Правила меняются. Сверяй документы и суммы на момент сделки.</p><div class="src"><a href="https://www.tkgm.gov.tr/sites/default/files/2020-12/islem_rehberi-turkce_0.pdf" target="_blank" rel="noopener"><svg class="ic"><use href="#i-doc"/></svg>Руководство земельного ведомства TKGM для иностранцев</a><a href="https://www.ffkpartnerhukuk.com.tr/yabancilar-icin-tapu-islemleri-rehberi-2026-guncel-rehber/" target="_blank" rel="noopener"><svg class="ic"><use href="#i-doc"/></svg>Обзор шагов для иностранцев, FKK Hukuk</a><a href="https://moral.av.tr/tr/hukuki-haberler/noterler-tarafindan-duzenlenecek-tasinmaz-satis-sozlesmelerine-iliskin-yonetmelik-yayimlandi-1792" target="_blank" rel="noopener"><svg class="ic"><use href="#i-doc"/></svg>Регламент о договорах продажи у нотариуса</a></div></div></details>
   </div>
+  <figure class="vz card rv" id="vzPlan" aria-label="План квартиры 3+1: три комнаты и гостиная">
+    <div class="vz-row">
+      <svg class="vz-dia" viewBox="0 0 720 380" aria-hidden="true">
+        <rect x="14" y="14" width="692" height="352" rx="14" fill="#fff" stroke="#2B2D2B" stroke-width="8"/>
+        <g class="vz-r"><rect x="22" y="22" width="218" height="170" fill="#BDE7FA"/><text class="vz-t" x="131" y="130" text-anchor="middle" font-size="64" fill="#178FCB">1</text></g>
+        <g class="vz-r"><rect x="250" y="22" width="220" height="170" fill="#BDE7FA"/><text class="vz-t" x="360" y="130" text-anchor="middle" font-size="64" fill="#178FCB">2</text></g>
+        <g class="vz-r"><rect x="480" y="22" width="218" height="170" fill="#BDE7FA"/><text class="vz-t" x="589" y="130" text-anchor="middle" font-size="64" fill="#178FCB">3</text></g>
+        <g class="vz-r"><rect x="22" y="200" width="676" height="158" fill="#F5C31E"/><text class="vz-t" x="360" y="300" text-anchor="middle" font-size="62" fill="#2B2D2B">+1</text></g>
+        <g stroke="#2B2D2B" stroke-width="8"><path d="M245 22v170M475 22v170M22 196h100M170 196h130M348 196h130M526 196h172"/></g>
+        <g fill="none" stroke="#2B2D2B" stroke-width="3" stroke-dasharray="4 6"><path d="M124 196a40 40 0 0 0 40 40M302 196a40 40 0 0 0 40 40M480 196a40 40 0 0 0 40 40"/></g>
+      </svg>
+      <div class="vz-note"><p>Первая цифра: комнаты.</p><p>Плюс один: гостиная.</p><p>По-нашему это четырёхкомнатная.</p></div>
+    </div>
+  </figure>
   <div class="warn">Это гайд по языку, а не юридическая консультация. Цифр и размеров сборов здесь нет специально: они меняются. Перед сделкой поговори с юристом.</div>
 </section>
 
@@ -596,6 +691,15 @@ details[open] summary .pm{rotate:45deg}
       <div><label class="lb" for="who">Кому звонишь</label><select class="sel" id="who"><option value="0">Риелтору</option><option value="1">Продавцу</option><option value="2">Нотариусу</option><option value="3">В земельное управление</option></select><button class="btn g" type="button" id="mk" style="width:100%;margin-top:14px">Получить фразы</button></div>
       <div id="cks"></div>
     </div><div class="res" id="res"></div></div>
+  <figure class="vz card rv" id="vzCall" aria-label="Телефон звонит риелтору, рядом готовые фразы">
+    <svg class="vz-art" viewBox="0 0 1000 400" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+      <rect width="1000" height="400" fill="#E8F6E6"/>
+      <g fill="none" stroke="#7CCB5F" stroke-width="6" stroke-linecap="round"><path class="vz-ring" d="M336 150c-24 30-24 72 0 102"/><path class="vz-ring" d="M296 122c-40 50-40 120 0 170"/><path class="vz-ring" d="M664 150c24 30 24 72 0 102"/><path class="vz-ring" d="M704 122c40 50 40 120 0 170"/></g>
+      <g transform="translate(500 200)"><rect x="-86" y="-186" width="172" height="372" rx="30" fill="#2B2D2B"/><rect x="-74" y="-162" width="148" height="320" rx="14" fill="#fff"/><circle cy="-92" r="46" fill="#55BC4F"/><circle cy="-106" r="17" fill="#fff"/><path d="M-30-62c0-16 14-26 30-26s30 10 30 26z" fill="#fff"/><text class="vz-t" y="-8" text-anchor="middle" font-size="26" fill="#2B2D2B">Emlakçı</text><circle cx="0" cy="96" r="30" fill="#55BC4F"/><path d="M-14 86c0-6 8-10 12-4 3 4 0 8-3 10 2 5 6 9 10 11 3-4 8-5 11-2 5 5 1 13-5 13-14 0-27-14-25-28z" fill="#fff"/></g>
+    </svg>
+    <div class="vz-tags"><span class="vz-tag" lang="tr">Tapu kimin üzerine?</span><span class="vz-tag" lang="tr">Komisyon ne kadar?</span><span class="vz-tag" lang="tr">Son fiyat ne olur?</span></div>
+    <figcaption class="vz-cap">Ответь на вопросы и получи готовые фразы.</figcaption>
+  </figure>
   </div>
 </section>
 
@@ -604,6 +708,18 @@ details[open] summary .pm{rotate:45deg}
   <p class="lead ctr">Ответ проверяется сразу. Рядом написано почему.</p>
   <div class="exl" id="exl"></div>
   <div class="card scorec" id="score"><div class="big"><span id="scN">0</span> из 10</div><p id="scT"></p><button class="go" type="button" id="scR">Начать заново</button></div>
+  <figure class="vz card rv" id="vzKey" aria-label="На столе tapu с отмеченной строкой Malik, ключ и печать">
+    <svg class="vz-art" viewBox="0 0 1000 400" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+      <rect width="1000" height="400" fill="#BDE7FA"/><g fill="none" stroke="#9BDAF5" stroke-width="3"><path d="M0 90h1000M0 200h1000M0 310h1000"/></g>
+      <rect x="360" y="24" width="280" height="352" rx="10" fill="#fff" stroke="#E9EBE9" stroke-width="3"/><rect x="360" y="24" width="280" height="40" rx="10" fill="#55BC4F"/><text class="vz-t" x="500" y="52" text-anchor="middle" font-size="24" fill="#fff">Tapu senedi</text>
+      <g stroke="#D5DAD5" stroke-width="7" stroke-linecap="round"><path d="M392 96h216M392 124h170M392 152h216"/></g>
+      <rect class="vz-m" x="376" y="180" width="248" height="64" rx="10" fill="#E8F6E6"/><text class="vz-m vz-t" x="500" y="222" text-anchor="middle" font-size="30" fill="#3FA63A">Malik</text>
+      <g stroke="#D5DAD5" stroke-width="7" stroke-linecap="round"><path d="M392 278h216M392 306h120"/></g>
+      <g class="vz-seal" transform="translate(590 340)"><circle r="42" fill="none" stroke="#178FCB" stroke-width="6"/><path d="m-20 2 14 14 26-30" fill="none" stroke="#178FCB" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/></g>
+      <g class="vz-key" transform="translate(266 214) rotate(-16)" fill="none" stroke="#F5C31E" stroke-width="16" stroke-linecap="round"><circle cx="0" cy="-60" r="40"/><path d="M0-20v114M0 64h34M0 94h24"/></g>
+    </svg>
+    <figcaption class="vz-cap">Malik. Собственник. Это твоё имя, если всё прошло хорошо.</figcaption>
+  </figure>
 </section>
 
 <section class="sec wrap" id="ad" data-nav="Платформа">
@@ -845,6 +961,18 @@ gsap.set('.rv',{y:32});ScrollTrigger.batch('.rv',{start:'top 92%',once:true,onEn
 ScrollTrigger.batch('.trow',{start:'top 94%',once:true,onEnter:function(b){gsap.from(b,{x:-24,autoAlpha:0,duration:.45,stagger:.08,ease:'power2.out',clearProps:'all'})}});
 $$('[data-c]').forEach(function(n){if(n.closest('#bars'))return;var v=+n.dataset.c,o={v:0};n.textContent='0';gsap.to(o,{v:v,duration:1.5,ease:'power2.out',scrollTrigger:{trigger:n,start:'top 92%',once:true},onUpdate:function(){n.textContent=Math.round(o.v)}})});
 $$('#bars .bar').forEach(function(b,i){var bar2=$('i',b),n=$('b',b),v=+n.dataset.c,o={p:0};gsap.set(bar2,{scaleY:0});var tl=gsap.timeline({scrollTrigger:{trigger:'#bars',start:'top 88%',end:'top 38%',scrub:.6}});tl.to(bar2,{scaleY:1,ease:'none',duration:1},i*.12);tl.to(o,{p:1,ease:'none',duration:1,onUpdate:function(){n.textContent=Math.round(v*o.p)}},i*.12)});
+
+/* иллюстрации */
+function vz(sel,fn){var el=$(sel);if(!el)return;var tl=gsap.timeline({defaults:{ease:'power2.out',duration:.6},scrollTrigger:{trigger:el,start:'top 78%',once:true}});fn(tl,el)}
+function loop(tgt,el,vars){vars.repeat=-1;if(vars.yoyo===undefined)vars.yoyo=true;vars.scrollTrigger={trigger:el,start:'top bottom',end:'bottom top',toggleActions:'play pause resume pause'};gsap.to(tgt,vars)}
+vz('#vzRoom',function(tl,el){tl.from($('.vz-man',el),{y:90,autoAlpha:0,duration:.7,ease:'back.out(1.5)'});$$('.vz-drip path',el).forEach(function(d,i){gsap.fromTo(d,{y:-34,opacity:1},{y:34,opacity:.15,duration:1.1,delay:i*.5,repeat:-1,ease:'power1.in',scrollTrigger:{trigger:el,start:'top bottom',end:'bottom top',toggleActions:'play pause resume pause'}})})});
+vz('#vzSign',function(tl,el){var p=$('.vz-sign',el);tl.from(p,{strokeDashoffset:520,duration:1.5,ease:'power1.inOut'}).from($('.vz-pen',el),{x:-160,y:-20,duration:1.5,ease:'power1.inOut'},0);$$('.vz-st',el).forEach(function(q,i){loop(q,el,{y:-10,opacity:.3,duration:1.3+i*.25,ease:'sine.inOut'})})});
+vz('#vzTrain',function(tl,el){tl.from($('.vz-loco',el),{x:-180,duration:.9,ease:'power2.out'}).from($$('.vz-wag',el),{x:-140,autoAlpha:0,stagger:.2,duration:.55,ease:'back.out(1.2)'},.15);loop($$('.vz-sm',el),el,{y:-14,opacity:.2,duration:1.5,ease:'sine.inOut',stagger:.3})});
+vz('#vzHug',function(tl,el){tl.from($$('.vz-arm',el),{autoAlpha:0,scale:.7,transformOrigin:'50% 100%',duration:.6,ease:'back.out(1.6)'}).from($('.vz-tail',el),{scale:0,transformOrigin:'50% 50%',duration:.45,ease:'back.out(2.2)'},.25).from($$('.vz-tag',el),{y:14,autoAlpha:0,stagger:.07,duration:.35},.3)});
+vz('#vzPlot',function(tl,el){tl.from($$('.vz-n',el),{scale:.86,transformOrigin:'50% 50%',autoAlpha:0,stagger:.12,duration:.45}).from($('.vz-pin',el),{y:-90,autoAlpha:0,duration:.7,ease:'bounce.out'},.5)});
+vz('#vzPlan',function(tl,el){tl.from($$('.vz-r',el),{autoAlpha:0,scale:.9,transformOrigin:'50% 50%',stagger:.16,duration:.4})});
+vz('#vzKey',function(tl,el){tl.from($$('.vz-m',el),{autoAlpha:0,x:-30,duration:.5}).from($('.vz-seal',el),{scale:1.8,autoAlpha:0,transformOrigin:'50% 50%',duration:.45,ease:'back.out(2.4)'},.2).from($('.vz-key',el),{y:-80,rotation:30,autoAlpha:0,duration:.7,ease:'bounce.out'},.3)});
+vz('#vzCall',function(tl,el){$$('.vz-ring',el).forEach(function(p,i){loop(p,el,{opacity:.2,duration:.9,delay:i*.15,ease:'sine.inOut'})});tl.from($$('.vz-tag',el),{y:14,autoAlpha:0,stagger:.1,duration:.4})});
 addEventListener('load',function(){ScrollTrigger.refresh()});if(D.fonts&&D.fonts.ready)D.fonts.ready.then(function(){ScrollTrigger.refresh()});
 }
 document.addEventListener('DOMContentLoaded',xInit);
