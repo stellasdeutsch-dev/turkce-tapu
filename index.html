@@ -379,6 +379,23 @@ details[open] summary .pm{rotate:45deg}
 .vz-lab{display:flex;flex-wrap:wrap;gap:6px 16px;justify-content:center;font-size:14px;color:var(--mid)}
 .vz-lab i{display:inline-block;width:12px;height:12px;border-radius:4px;margin-right:6px;vertical-align:-1px}
 @media (min-width:768px){.vz-row{grid-template-columns:1.25fr 1fr;gap:34px}}
+/* retention: checkpoints and bridge */
+.hk{hyphens:manual;-webkit-hyphens:manual}
+.cp{margin-top:clamp(60px,8vw,96px);display:grid;gap:14px}
+.cp-bar{height:8px;background:var(--line);border-radius:99px;overflow:hidden}
+.cp-bar i{display:block;height:100%;background:var(--g);border-radius:99px}
+.cp p{font-size:clamp(17px,1.9vw,20px);line-height:1.5;max-width:46em;text-wrap:pretty;color:var(--mid);hyphens:manual;-webkit-hyphens:manual}
+.cp b{color:var(--ink);font-weight:700}
+.brg{display:grid;grid-template-columns:minmax(0,340px) minmax(0,1fr);gap:clamp(32px,6vw,84px);align-items:center;border-bottom:1px solid var(--line)}
+.brg-ph{width:100%;height:auto;align-self:end;margin:0}
+.brg-t{padding:clamp(16px,3vw,40px) 0}
+.brg h2{text-align:left}
+.brg-l{list-style:none;padding:0;margin:22px 0 0;display:grid;gap:12px;font-size:clamp(16.5px,1.6vw,18px);line-height:1.45;hyphens:manual;-webkit-hyphens:manual}
+.brg .lead{hyphens:manual;-webkit-hyphens:manual}
+.brg-l li{display:flex;gap:10px;align-items:flex-start}
+.brg-l .ic{color:var(--g2);font-size:20px;margin-top:3px}
+.brg .btns .btn{flex:0 1 auto}
+@media (max-width:767px){.brg{grid-template-columns:minmax(0,1fr)}.brg-ph{max-width:320px;margin:0 auto;align-self:auto}}
 </style>
 <script defer src="assets/gsap-bundle.min.js"></script>
 </head>
@@ -465,6 +482,7 @@ details[open] summary .pm{rotate:45deg}
 
 <section class="sec wrap" id="chto" data-nav="Что это">
   <h2>Три слова, <b>из-за которых не спят</b></h2>
+  <p class="lead ctr hk">Два слова про право на квартиру. За одним стоит готовая квартира. За другим дом, который ещё не принят. Какое где, скажу ближе к концу.</p>
   <div class="split">
     <div class="story card">
       <p>Покупаешь квартиру в Анталье. Море видно, если встать на стул.</p>
@@ -542,6 +560,8 @@ details[open] summary .pm{rotate:45deg}
   <div class="warn">Порядок зависит от сделки. Предварительного договора у нотариуса может не быть, а новые квартиры часто идут по своему сценарию.</div>
 </section>
 
+<div class="wrap"><div class="cp"><div class="cp-bar" aria-hidden="true"><i style="width:33%"></i></div><p><b>Треть гайда позади.</b> Дальше разберём по вагонам одно длинное слово: <span class="trw" lang="tr">müdür<b class="t">lüğ</b><b class="s">ü</b><b class="p">nde</b></span>.</p></div></div>
+
 <section class="sec wrap" id="kak" data-nav="Как собрать">
   <h2>Как эти слова <b>собираются</b></h2>
   <p class="lead ctr">Турецкое слово это поезд. Вагоны цепляются по одному.</p>
@@ -611,6 +631,8 @@ details[open] summary .pm{rotate:45deg}
       <div class="stack" id="altC"></div>
     </div></div></div>
   </div>
+
+  <div class="cp"><div class="cp-bar" aria-hidden="true"><i style="width:71%"></i></div><p><b>Больше двух третей позади.</b> Дальше учимся читать <span class="trw" lang="tr">tapu</span> строка за строкой. Потом восемь мест, где ошибаются русскоязычные.</p></div>
 
   <div class="sub">
     <h3>Как читать <b>tapu</b></h3>
@@ -720,6 +742,16 @@ details[open] summary .pm{rotate:45deg}
     </svg>
     <figcaption class="vz-cap">Malik. Собственник. Это твоё имя, если всё прошло хорошо.</figcaption>
   </figure>
+</section>
+
+<section class="sec wrap brg" aria-labelledby="brgH">
+  <img class="brg-ph" src="media/ph-bridge.webp" alt="" width="378" height="516" loading="lazy">
+  <div class="brg-t">
+    <h2 id="brgH">Дом не принят? Значит, <b lang="tr">kat irtifakı</b></h2>
+    <ul class="brg-l"><li><svg class="ic"><use href="#i-ok"/></svg><span>Перед подписью теперь есть три вопроса: чьё это, сколько стоит, кто заверил.</span></li><li><svg class="ic"><use href="#i-ok"/></svg><span><span class="trw" lang="tr">Tapu<b class="s">da</b> haciz var mı?</span> теперь спрашиваешь лично. Риелтор пусть ставит кофе.</span></li></ul>
+    <p class="lead">Одна тема закрыта. На платформе 128 гайдов по грамматике и 131 блок лексики, $30 один раз.</p>
+    <div class="btns"><a class="btn g" href="#ad">Посмотреть платформу<svg class="ic"><use href="#i-down"/></svg></a></div>
+  </div>
 </section>
 
 <section class="sec wrap" id="ad" data-nav="Платформа">
